@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column
+}
+
+div {
+    display: flex;
+}
+
+.menu {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.buttonRole {
+    height: 20px;
+}
+
+#arguments, #refutations {
+    flex-direction: column;
+}
+
+.argument, .refutation {
+    flex-direction: row;
+
+}
+
+.refutation {
+    width: 100%;
+}
+.refutation textarea {
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+label {
+font-size: 17px;    
+}
+
+label[for='argTitle'] {
+    font-weight: bold;
+}
+
+.sectionTitle {
+    font-weight: bold;
+    justify-content: center;
+    border-top-width: 3px;
+    border-top-style: dotted;
+    padding-top:10px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.qsrq {
+    font-size: 20px;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.government,
+.argument {
+    margin-bottom: 10px;
+}
+
+:is(.government, .argument, .cristal) label {
+    width: 20%;
+}
+
+:is(.government, .argument, .cristal) :is(input, textarea) {
+    width: 80%;
+}
+
+input {
+    width: 75%;
+    height: 25px;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+#addRefut {
+    margin-top: 10px;
+}
