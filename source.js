@@ -1,7 +1,9 @@
 class DebateSheet {
+
     constructor() {
         this.argumentNo = 1;
         this.isGovernement = true;
+        //this.isJudge = false;
 
         document.getElementById("addArg").addEventListener("click", ()=> {
             this.createNewArgument()

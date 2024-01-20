@@ -17,6 +17,8 @@
         <div id="team" class="menu">
             <button id="govButton" class="buttonRole">Gouvernement</button>
             <button id="oppButton" class="buttonRole">Opposition</button>
+            <!--<button id="jugeButton" class="buttonRole">Juge</button>
+            <button id="debateurButton" class="buttonRole">Débatteur</button> -->
         </div>
         <div class="government">
             <label for='context'>Contexte dans lequel la motion se situe </label>
@@ -76,3 +78,26 @@
 </html>
 <script src="./debateParser.js"></script>
 <script src="./source.js"></script>
+<script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('serviceworker.js')
+    }
+
+    const CACHE_NAME = 'cool-cache';
+
+// Add whichever assets you want to pre-cache here:
+const PRECACHE_ASSETS = [
+    '/assets/',
+    '/src/'
+]
+
+// Listener for the install event - pre-caches our assets list on service worker install.
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(CACHE_NAME);
+        cache.addAll(PRECACHE_ASSETS);
+    })());
+});
+
+  </script>
+  
