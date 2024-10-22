@@ -21,6 +21,10 @@ div {
     margin-left: 15px;
 }
 
+.lastElement {
+    padding-bottom: 20px;
+}
+
 .menu {
     width: 100%;
     flex-direction: row;
@@ -32,13 +36,14 @@ div {
     height: 20px;
 }
 
-#arguments, #refutations {
+#arguments,
+#refutations {
     flex-direction: column;
 }
 
-.argument, .refutation {
+.argument,
+.refutation {
     flex-direction: row;
-
 }
 
 .refutation {
@@ -51,10 +56,10 @@ div {
 }
 
 label {
-font-size: 17px;    
+    font-size: 17px;
 }
 
-label[for='argTitle'] {
+label[for="argTitle"] {
     font-weight: bold;
 }
 
@@ -63,7 +68,7 @@ label[for='argTitle'] {
     justify-content: center;
     border-top-width: 3px;
     border-top-style: dotted;
-    padding-top:10px;
+    padding-top: 10px;
     width: 100%;
     padding-bottom: 10px;
 }
@@ -103,7 +108,7 @@ input {
 .svgImg {
     width: 50px;
     height: 50px;
-    margin-right:auto;
+    margin-right: auto;
     margin-left: auto;
     fill: black;
 }

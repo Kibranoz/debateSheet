@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>DebateSheet - Feuille de débat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="manifest" href="./manifest.json" />
@@ -17,15 +18,14 @@
         <div id="team" class="menu">
             <button id="govButton" class="buttonRole">Gouvernement</button>
             <button id="oppButton" class="buttonRole">Opposition</button>
-            <!--<button id="jugeButton" class="buttonRole">Juge</button>
-            <button id="debateurButton" class="buttonRole">Débatteur</button> -->
+            <button id="debateurButton" class="buttonRole">Débatteur</button>
         </div>
         <div class="government">
             <label for='context'>Contexte dans lequel la motion se situe </label>
             <textarea id="contextContent" name="context"></textarea>
         </div>
         <div class="government">
-            <label for="caracterisation">Caractérisation</label>
+            <label for="caracterisation" title="Définissez des aspects importants du débat ici">Balises</label>
             <textarea id="caracterisationContent" for="caracterisation"></textarea>
         </div>
         <div class="government">
@@ -52,7 +52,7 @@
 
         <div class='sectionTitle'>Cristallisation</div>
         <div class="cristal">
-            <label for="theme">Dans ce débat nous avons parlé des thèmes suivants : </label>
+            <label for="theme">Ce sur quoi il faudrait juger le débat : </label>
             <textarea id="themeContent" for="theme"></textarea>
         </div>
         <div class="cristal">
@@ -65,7 +65,7 @@
             <textarea id="nousContent" for="nous"></textarea>
         </div>
 
-        <div class="cristal">
+        <div class="cristal lastElement">
             <label for="conclusion">Nous avons raison parce que: </label>
             <textarea id="conclusionContent" for="Conclusion"></textarea>
         </div>
@@ -100,4 +100,3 @@ self.addEventListener('install', event => {
 });
 
   </script>
-  

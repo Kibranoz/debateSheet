@@ -3,7 +3,7 @@ class DebateSheet {
     constructor() {
         this.argumentNo = 1;
         this.isGovernement = true;
-        //this.isJudge = false;
+        this.isJudge = false;
 
         document.getElementById("addArg").addEventListener("click", ()=> {
             this.createNewArgument()
@@ -27,6 +27,15 @@ class DebateSheet {
                 element.classList.add("hidden")
             });
             this.isGov = false;
+        })
+
+        document.getElementById("jugeButton").addEventListener("click", ()=>{
+            this.isJudge = true;
+        })
+
+
+        document.getElementById("debateurButton").addEventListener("click", ()=>{
+            this.isJudge = false;
         })
 
         document.getElementById("saveButton").addEventListener("click", async ()=> {
@@ -57,6 +66,9 @@ class DebateSheet {
     }
 createNewArgument() {
     let debateArguments = document.getElementById("arguments");
+    if (this.isJudge){
+        debateArguments.appendChild(this.createLabelledInput("input","name", "Nom ", this.argumentNo));
+    }  
     debateArguments.appendChild(this.createLabelledInput("input","argTitle", "Argument "+ this.argumentNo, this.argumentNo));
     debateArguments.appendChild(this.createLabelledInput("textarea","premiss", "Prémisse", this.argumentNo))
     debateArguments.appendChild(this.createLabelledInput("textarea", "mecha", "Mécanisation", this.argumentNo))
