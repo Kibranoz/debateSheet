@@ -1,6 +1,13 @@
+:root {
+    --used-color: lightgray;
+    --app-bg-color: white;
+    --app-items-color: black;
+}
 body {
     display: flex;
     flex-direction: row;
+    background-color: var(--app-bg-color);
+    color: var(--app-items-color);
 }
 
 textarea {
@@ -48,11 +55,21 @@ div {
 
 .refutation {
     width: 100%;
+    padding: 5px;
+}
+
+.isDone {
+    background-color: var(--used-color);
 }
 .refutation textarea {
-    flex-grow: 1;
+    flex-grow: 5;
     margin-right: 10px;
+    width: 100%;
     margin-left: 10px;
+}
+
+.refutation input {
+    flex-shrink: 5;
 }
 
 label {
@@ -110,5 +127,20 @@ input {
     height: 50px;
     margin-right: auto;
     margin-left: auto;
-    fill: black;
+    fill: var(--app-items-color);
+}
+
+textarea,
+input,
+button {
+    background-color: var(--app-bg-color);
+    color: var(--app-items-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --used-color: #515151;
+        --app-bg-color: black;
+        --app-items-color: white;
+    }
 }

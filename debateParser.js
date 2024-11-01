@@ -1,5 +1,7 @@
 class DebateParser {
+  /** @param{DebateSheetInfo} debateSheetInfo */
   constructor(debateSheetInfo) {
+    /**@type {DebateSheetInfo} */
     this.debateSheetInfo = debateSheetInfo;
   }
   getTitle() {
