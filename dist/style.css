@@ -1,0 +1,162 @@
+:root {
+    --used-color: lightgray;
+    --app-bg-color: white;
+    --app-items-color: black;
+    --checkbox-color: #dbdbdb;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--app-bg-color);
+    color: var(--app-items-color);
+}
+
+textarea {
+    resize: vertical;
+}
+
+div {
+    display: flex;
+}
+
+.debateSheet {
+    flex-grow: 6;
+    flex-direction: column;
+}
+
+.sideMenu {
+    width: 75px;
+    margin-left: 15px;
+}
+
+.lastElement {
+    padding-bottom: 20px;
+}
+
+.menu {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.buttonRole {
+    height: 20px;
+}
+
+#arguments,
+#refutations {
+    flex-direction: column;
+}
+
+.argument,
+.refutation {
+    flex-direction: row;
+}
+
+.refutation {
+    width: 100%;
+    padding: 5px;
+}
+
+.isDone {
+    background-color: var(--used-color);
+}
+.refutation textarea {
+    flex-grow: 5;
+    margin-right: 10px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.refutation input {
+    flex-shrink: 5;
+}
+
+label {
+    font-size: 17px;
+}
+
+label[for="argTitle"] {
+    font-weight: bold;
+}
+
+.sectionTitle {
+    font-weight: bold;
+    justify-content: center;
+    border-top-width: 3px;
+    border-top-style: dotted;
+    padding-top: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.qsrq {
+    font-size: 20px;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.government,
+.argument {
+    margin-bottom: 10px;
+}
+
+:is(.government, .argument, .cristal) label {
+    width: 20%;
+}
+
+:is(.government, .argument, .cristal) :is(input, textarea) {
+    width: 80%;
+}
+
+input {
+    width: 75%;
+    height: 25px;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+#addRefut {
+    margin-top: 10px;
+}
+
+.svgImg {
+    width: 50px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    fill: var(--app-items-color);
+}
+
+input[type="checkbox"]:checked {
+    min-width: 25px;
+    --webkit-appearance: auto;
+}
+
+input[type="checkbox"]:not(:checked) {
+    -webkit-appearance: none; /* Remove default styling */
+    background-color: var(
+        --checkbox-color
+    ); /* Set background color for unchecked state */
+    min-width: 25px;
+}
+
+textarea,
+input,
+button {
+    background-color: var(--app-bg-color);
+    color: var(--app-items-color);
+    border: 1px solid grey;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --used-color: #515151;
+        --checkbox-color: #6b6b6b;
+        --app-bg-color: black;
+        --app-items-color: white;
+    }
+}

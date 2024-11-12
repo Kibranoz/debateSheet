@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DebateSheet",
+  "version": "0.1.0",
+  "identifier": "dev.louiscouture.debatesheet",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "debatesheet",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon-128x128.png",
+      "icons/icon-192x192.png",
+      "icons/icon-512x512.png",
+      "icons/debatesheet.ico"
+    ]
+  },
+  "plugins": {
+    "allowlist": {
+      "fs": {
+        "scope": ["$HOME"],
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true
+      }
+    }
+  }
+}
